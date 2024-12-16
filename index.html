@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: young-serif;
+      src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    }
+
+    @font-face {
+      font-family: outfit;
+      src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: #F3E5D8;
+      padding: 10vh 0;
+    }
+
+    h1 {
+      font-family: young-serif;
+    }
+
+    p {
+      font-family: outfit;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    li span {
+      text-align: left;
+    }
+
+    ol.ml-20 {
+      list-style: none;
+    }
+
+    ol.ml-20 li {
+      position: relative;
+    }
+
+    ol.ml-20 li::before {
+      content: counter(list-item) ". ";
+      /* Adds numbers before each item */
+      color: #773551;
+      font-weight: 500;
+      /* Change the weight of the numbers */
+      position: absolute;
+      left: -25px;
+      /* Adjust to position the number properly */
+      top: 0;
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    hr {
+      background-color: #d9d4d4;
+      height: 1px;
+      border: 0;
+    }
+
+    .main {
+      background-color: white;
+      border-radius: 20px;
+      max-width: 38%;
+      width: 100%;
+      padding: 4vh 2.5vw;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      justify-self: center;
+    }
+
+    .row-border{
+      border-top: 1px solid #d9d4d4;
+      grid-column: 1/3;
+    }
+
+    .banner {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .gap-1 {
+      gap: 0.2vh
+    }
+
+    .gap-8 {
+      gap: clamp(1vh, 3vh, 5vh)
+    }
+
+    .bg-pink {
+      background-color: #FFF7FC;
+    }
+
+    .f-superdarkpink {
+      color: #844D37;
+    }
+
+    .f-darkpink {
+      color: #773551;
+    }
+
+    .f-grey {
+      color: #605D58;
+    }
+
+    .border-md {
+      border-radius: 20px;
+    }
+
+    .py-1 {
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+    }
+
+    .py-2 {
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+    }
+
+    .px-2 {
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+
+    .young-serif {
+      font-family: young-serif;
+    }
+
+    .outfit {
+      font-family: outfit;
+    }
+
+    .fw-600 {
+      font-weight: 600;
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .fw-400 {
+      font-weight: 400;
+    }
+
+    .fw-300 {
+      font-weight: 300;
+    }
+
+    .fs-md {
+      font-size: 1.2rem;
+    }
+
+    .ml-20 {
+      margin-left: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <img class="banner" src="assets/images/image-omelette.jpeg" />
+    <div class="flex flex-col gap-8">
+      <div class="py-1"></div>
+      <h1>Simple Omelette Recipe</h1>
+      <p class="fw-300 f-grey">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs
+        cooked
+        to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      <div class="outfit bg-pink border-md py-2 px-2">
+        <h4 class="fs-md f-darkpink">
+          Preparation time
+        </h4>
+        <ul class="ml-20 fw-300">
+          <li>
+            <span class="flex gap-1"><b class="">Total:</b>
+              <p class="f-grey">Approximately 10 minutes</p>
+            </span>
+          </li>
+          <li>
+            <span class="flex gap-1"><b class="">Preparation:</b>
+              <p class="f-grey">5 minutes</p>
+            </span>
+          </li>
+          <li>
+            <span class="flex gap-1"><b class="">Cooking:</b>
+              <p class="f-grey">5 minutes</p>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="outfit fw-300 f-grey">
+        <h2 class="young-serif f-superdarkpink">Ingredients</h2>
+        <div class="py-1"></div>
+        <ul class="ml-20">
+          <li>
+            <span>
+              2-3 large eggs
+            </span>
+          </li>
+          <li>
+            <span>
+              Salt, to taste
+            </span>
+          </li>
+          <li>
+            <span>
+              Pepper, to taste
+            </span>
+          </li>
+          <li>
+            <span>
+              1 tablespoon of butter or oil
+            </span>
+          </li>
+          <li>
+            <span>
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
+            </span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <div class="outfit fw-300">
+        <h2 class="young-serif f-superdarkpink">Instructions</h2>
+        <div class="py-1"></div>
+        <ol class="ml-20">
+          <li>
+            <P class="f-grey">
+              <b>Beat the eggs:</b>
+              In a bowl, beat the eggs with a pinch of salt and pepper until they
+              are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+            </P>
+          </li>
+          <li>
+            <P class="f-grey">
+              <b>Heat the pan:</b>
+              Place a non-stick frying pan over medium heat and add butter or oil.
+            </P>
+          </li>
+          <li>
+            <P class="f-grey">
+              <b>Cook the omelette:</b>
+              Once the butter is melted and bubbling, pour in the eggs. Tilt
+              the pan to ensure
+              the eggs evenly coat the surface.
+            </P>
+          </li>
+          <li>
+            <P class="f-grey">
+              <b>Add fillings (optional):</b>
+              When the eggs begin to set at the edges but are still
+              slightly runny in the
+              middle, sprinkle your chosen fillings over one half of the omelette.
+            </P>
+          </li>
+          <li>
+            <P class="f-grey">
+              <b>Fold and serve:</b>
+              As the omelette continues to cook, carefully lift one edge and fold
+              it over the
+              fillings. Let it cook for another minute, then slide it onto a plate.
+            </P>
+          </li>
+          <li>
+            <P class="f-grey">
+              <b>Enjoy:</b>
+              Serve hot, with additional salt and pepper if needed.
+            </P>
+          </li>
+        </ol>
+      </div>
+      <hr>
+      <div>
+        <h2 class="young-serif f-superdarkpink">Nutrition</h2>
+        <div class="py-1"></div>
+        <p class="f-grey fw-300">The table below shows nutritional values per serving without the additional fillings.</p>
+        <div class="py-1"></div>
+        <div class="grid f-grey">
+          <p class="ml-20">Calories</p>
+          <p class="f-superdarkpink"><b>277kcal</b></p>
+          <div class="row-border"></div>
+          <p class="ml-20">Carbs</p>
+          <p class="f-superdarkpink"><b>0g</b></p>
+          <div class="row-border"></div>
+          <p class="ml-20">Protein</p>
+          <p class="f-superdarkpink"><b>20g</b></p>
+          <div class="row-border"></div>
+          <p class="ml-20">Fat</p>
+          <p class="f-superdarkpink"><b>22g</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
